@@ -1,4 +1,4 @@
-const THEME_KEY = 'historynama-theme';
+const THEME_KEY = 'ShodhPath-theme';
 const categories = [
     {
         title: 'Study Materials',
