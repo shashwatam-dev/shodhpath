@@ -5,30 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HistoryNama : Advanced Research Hub</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
-<!--- Historical Study Section --->
+<header class="page-header">
+    <div class="header-bar">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
 
-    <div class="group-head">
+        <nav class="top-nav" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#materials">Study Materials</a>
+            <a href="#swayam">SWAYAM Portals</a>
+            <a href="#research">Research & Journals</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle day night">
+            <span class="icon-sun">☀︎</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="group-head" id="home">
         <div class="group-head-content">
-        <!-- 
-            <div class="image-box" onclick="openSite('https://linktr.ee/IamAshutoshTiwari7')">
-                <img class="logo" src="/assets/logo.jpg" alt="Logo">
-            </div>
-        -->
+            <span class="eyebrow">Advanced Research Hub</span>
             <h1 class="h1">HistoryNama</h1>
             <h2 class="h2">~ Ashutosh Tiwari</h2>
-            <p class="p">The More You Learn, The More You Realize How Much You Don't Know.</p>
+            <p class="p">Curated links, archives, and video lessons for history learners, researchers, and teachers.</p>
+            <div class="hero-actions">
+                <a href="#materials" class="hero-action">Browse Materials</a>
+                <a href="#videos" class="hero-action hero-action-secondary">Watch Videos</a>
+            </div>
         </div>
     </div>
 
-    
-    <p>Welcome to the</p>
-    <h1>HistoryNama : Advanced Research Hub</h1>
-    <p>Click on an image to visit the respective website.</p>
+    <section class="hero-copy">
+        <h2 class="page-title">A polished learning hub built for modern research</h2>
+        <p class="intro-text">Discover trusted portals, academic repositories, and curated video resources in one elegant interface. Each card opens in a new tab so your study flow stays uninterrupted.</p>
+    </section>
 
 
 
@@ -37,7 +60,7 @@
 
 <!--- Historical Study Section --->
 
-    <div class="group">
+    <div class="group" id="materials">
         <div class="group-title">Historical Study Materials</div>
         <div class="container">
             
@@ -86,7 +109,7 @@
     
 <!--- Swayam Study Section --->
 
-<div class="group">
+<div class="group" id="swayam">
     <div class="group-title">SAWYAM Study Portals</div>
     <div class="container">
 
@@ -192,7 +215,7 @@
 <!--- Research and Journals Section --->
 
 
-    <div class="group">
+    <div class="group" id="research">
         <div class="group-title">Research and Journals</div>
         <div class="container">
             
@@ -482,7 +505,7 @@
     
 <!--- Video Sources Section --->
 
-    <div class="group">
+    <div class="group" id="videos">
         <div class="group-title">Video Sources</div>
         <div class="container">
 
@@ -575,21 +598,54 @@
         </div>
     </div>
 
-<!-- Footer Section -->
+<!-- About Section -->
 
-    <div class="group-footer">
-        <div class="group-footer-content">
-        <!-- 
-            <div class="image-box" onclick="openSite('https://linktr.ee/IamAshutoshTiwari7')">
-                <img class="logo" src="/assets/logo.jpg" alt="Logo">
+    <div class="group" id="about">
+        <div class="group-title">About HistoryNama</div>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Mission</h3>
+                <p>To connect students and researchers with reliable history resources through a calm, modern interface.</p>
             </div>
-        -->
-            <img src = "assets/name-2.png" alt="footer name">
+            <div class="about-card">
+                <h3>Values</h3>
+                <p>Clarity, accessibility, and simplicity — while keeping advanced academic portals just a click away.</p>
+            </div>
         </div>
     </div>
 
+    <div class="group" id="contact">
+        <div class="group-title">Get in Touch</div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p><a href="mailto:info.scholars7@gmail.com">info.scholars7@gmail.com</a></p>
+            </div>
+            <div class="contact-card">
+                <h3>Location</h3>
+                <p>Online Learning Hub · India</p>
+            </div>
+        </div>
+    </div>
 
+</main>
 
+<footer class="page-footer">
+    <div class="footer-inner">
+        <div>
+            <p class="footer-title">HistoryNama</p>
+            <p>info.scholars7@gmail.com | Online Learning Hub</p>
+        </div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#materials">Study Materials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <p class="footer-copy">© 2026 HistoryNama. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
 
