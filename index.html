@@ -3,651 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HistoryNama curates academic portals, archives, and video lessons for history learners and researchers.">
     <title>HistoryNama : Advanced Research Hub</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header class="page-header">
     <div class="header-bar">
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <a class="brand" href="#home"><span class="brand-gradient">HistoryNama</span><span class="brand-fallback">HistoryNama</span></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
             <span class="hamburger"></span>
         </button>
-
-        <nav class="top-nav" aria-label="Main navigation">
+        <nav id="main-nav" class="top-nav" aria-label="Primary navigation">
             <a href="#home">Home</a>
-            <a href="#materials">Study Materials</a>
-            <a href="#swayam">SWAYAM Portals</a>
-            <a href="#research">Research & Journals</a>
-            <a href="#about">About</a>
+            <a href="#materials">Materials</a>
+            <a href="#swayam">SWAYAM</a>
+            <a href="#research">Research</a>
+            <a href="#ugc">UGC</a>
+            <a href="#videos">Videos</a>
             <a href="#contact">Contact</a>
         </nav>
-
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle day night">
+        <div class="header-search">
+            <label for="searchInput" class="sr-only">Search resources</label>
+            <input id="searchInput" class="search-input" type="search" placeholder="Search..." aria-label="Filter resources">
+        </div>
+        <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Switch theme">
             <span class="icon-sun">☀︎</span>
             <span class="icon-moon">🌙</span>
+            <span class="theme-label">Dark</span>
         </button>
     </div>
+    <p id="noResults" class="no-results">No matching resources found.</p>
 </header>
-
 <main class="main-content">
-    <div class="group-head" id="home">
-        <div class="group-head-content">
-            <span class="eyebrow">Advanced Research Hub</span>
-            <h1 class="h1">HistoryNama</h1>
-            <h2 class="h2">~ Ashutosh Tiwari</h2>
-            <p class="p">Curated links, archives, and video lessons for history learners, researchers, and teachers.</p>
-            <div class="hero-actions">
-                <a href="#materials" class="hero-action">Browse Materials</a>
-                <a href="#videos" class="hero-action hero-action-secondary">Watch Videos</a>
-            </div>
+    <section class="group-head" id="home">
+        <span class="eyebrow">Advanced Research Hub</span>
+        <h1 class="h1">HistoryNama</h1>
+        <p class="lead">Curated portals, academic archives, and video lessons for history learners, teachers, and researchers.</p>
+        <div class="hero-actions">
+            <a href="#materials" class="hero-action">Browse Materials</a>
+            <a href="#videos" class="hero-action hero-action-secondary">Explore Tutorials</a>
         </div>
-    </div>
-
-    <section class="hero-copy">
-        <h2 class="page-title">A polished learning hub built for modern research</h2>
-        <p class="intro-text">Discover trusted portals, academic repositories, and curated video resources in one elegant interface. Each card opens in a new tab so your study flow stays uninterrupted.</p>
     </section>
-
-
-
-
-    
-
-<!--- Historical Study Section --->
-
-    <div class="group" id="materials">
-        <div class="group-title">Historical Study Materials</div>
-        <div class="container">
-            
-            <div class="image-box" onclick="openSite('https://cec.nic.in/cec/swayam-moocs')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/h1.png" alt="Historical Study 1">
-                    </div>
-                    <div class="back">
-                        <h3>CEC Swayam MOOCs</h3>
-                        <p>Online Courses by CEC</p>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="image-box" onclick="openSite('https://egyankosh.ac.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/h2.jpg" alt="Historical Study 2">
-                    </div>
-                    <div class="back">
-                        <h3>eGyanKosh</h3>
-                        <p>National Digital Repository by IGNOU</p>
-                    </div>
-                </div>
-            </div>
-
-           <div class="image-box" onclick="openSite('http://ichr.ac.in/v3/')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/h3.jpg" alt="Historical Study 3">
-                    </div>			
-                    <div class="back">
-                        <h3>Indian Council of Historical Research</h3>
-                        <p>ICHR Website</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-
-
-
-    
-<!--- Swayam Study Section --->
-
-<div class="group" id="swayam">
-    <div class="group-title">SAWYAM Study Portals</div>
-    <div class="container">
-
-        <div class="image-box" onclick="openSite('https://swayam.gov.in')">
-            <div class="image-inner">
-                <div class="front">
-                    <img src="assets/swayam -1.png" alt="swayam 1">
-                </div>
-                <div class="back">
-                    <h3>SWAYAM</h3>
-                    <p>Online Courses by MHRD</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="image-box" onclick="openSite('https://swayamprabha.gov.in')">
-            <div class="image-inner">
-                <div class="front">
-                    <img src="assets/swayam -2.jpeg" alt="swayam 2">
-                </div>
-                <div class="back">
-                    <h3>SWAYAM PRABHA</h3>
-                    <p>Free DTH Channels by MHRD</p>
-                </div>
-            </div>
-        </div>
-
-       <div class="image-box" onclick="openSite('http://swayam-plus.swayam2.ac.in')">
-            <div class="image-inner">
-                <div class="front">
-                    <img src="assets/swayam -3.png" alt="swayam 3">
-                </div>
-                <div class="back">
-                    <h3>SWAYAM PLUS</h3>
-                    <p>MOOCs by IGNOU</p>
-                </div>
-            </div>
-        </div>			
-    </div>
-</div>
-
-
-<!--- ePG Pathshala Section --->
-
-    <div class="group">
-        <div class="group-title">ePG - Pathshala</div>
-        <div class="container">
-
-            <div class="image-box" onclick="openSite('https://epgp.inflibnet.ac.in/Home/Download')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/epg 0.png" alt="ePG Pathshala 1">
-                    </div>
-                    <div class="back">
-                        <h3>ePG PATHSHALA</h3>
-                        <p>Online Courses by MHRD</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://ebooks.inflibnet.ac.in/eadhyayan/')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/epg 2.png" alt="ePG Pathshala 2">
-                    </div>
-                    <div class="back">
-                        <h3>eAdhyayan</h3>
-                        <p>Online Courses by MHRD</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://nptel.ac.in')">
-                <div class="image-inner">
-                    <div class="front">
-                       <img src="assets/epg 3.png" alt="ePG Pathshala 3">
-                    </div>
-                    <div class="back">
-                        <h3>NPTEL</h3>
-                        <p>Online Courses by IITs</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://ncert.nic.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/epg 4.png" alt="ePG Pathshala 4">
-                    </div>
-                    <div class="back">
-                        <h3>NCERT</h3>
-                        <p>Online Courses by NCERT</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-
-
-
-<!--- Research and Journals Section --->
-
-
-    <div class="group" id="research">
-        <div class="group-title">Research and Journals</div>
-        <div class="container">
-            
-            <div class="image-box" onclick="openSite('https://asi.nic.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -0.jpg" alt="R&J-0">
-                    </div>
-                    <div class="back">
-                        <h3>ASI</h3>
-                        <p>Archaeological Survey of India</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://www.psa.gov.in/oneNationOneSubscription')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -1.png" alt="R&J-1">
-                    </div>
-                    <div class="back">
-                        <h3>PSA</h3>
-                        <p>Publications of the Social Sciences</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://ndl.iitkgp.ac.in/ndl_he')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -2.jpg" alt="R&J-2">
-                    </div>
-                    <div class="back">
-                        <h3>NDL</h3>
-                        <p> National Digital Library</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://indianculture.gov.in/MoCorganization/national-archives-india')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -3.jpg" alt="R&J-3">
-                    </div>
-                    <div class="back">
-                        <h3>National Archives of India</h3>
-                        <p> National Archives of India</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="image-box" onclick="openSite('https://shodhganga.inflibnet.ac.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -4.jpg" alt="R&J-4">
-                    </div>
-                    <div class="back">
-                        <h3>Shodhganga</h3>
-                        <p>Shodhganga: a reservoir of Indian theses</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://ess.inflibnet.ac.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -5.jpg" alt="R&J-5">
-                    </div>
-                    <div class="back">
-                        <h3>ESS</h3>
-                        <p> Electronic Theses and Dissertations</p>
-                    </div>
-                </div>
-            </div>
-
-<div class="image-box" onclick="openSite('https://shodhshuddhi.inflibnet.ac.in/')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/S_Shuddhi.png" alt="Shodh Shuddhi">
-                    </div>
-                    <div class="back">
-                        <h3>Shodh Shuddhi</h3>
-                        <p>Web based plagiarism detection software</p>
-                    </div>
-                </div>
-            </div>
-
-
-<div class="image-box" onclick="openSite('https://shodhchakra.inflibnet.ac.in/')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/s_chakra.png" alt="Shodh Chakra">
-                    </div>
-                    <div class="back">
-                        <h3>Shodh Chakra</h3>
-                        <p>A gateway to researchers for resources</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://indcat.inflibnet.ac.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -6.jpg" alt="R&J-6">
-                    </div>
-                    <div class="back">
-                        <h3>IndCat</h3>
-                        <p> Indian Public Library Network</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://ir.inflibnet.ac.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -7.jpg" alt="R&J-7">
-                    </div>
-                    <div class="back">
-                        <h3>IR</h3>
-                        <p> Institutional Repository</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://irins.org/irins/#')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -8.jpg" alt="R&J-8">
-                    </div>
-                    <div class="back">
-                        <h3>IRINS</h3>
-                        <p> Institutional Repository of Indian National Science</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://www.inflibnet.ac.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/r&j -9.jpg" alt="R&J-9">
-                    </div>
-                    <div class="back">
-                        <h3>INFLIBNET</h3>
-                        <p> Information and Library Network Centre</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-<!--- Ministry of Education Section --->
-
-    <div class="group">
-        <div class="group-title">Ministry of Education</div>
-        <div class="container">
-
-            <div class="image-box" onclick="openSite('https://www.pmevidya.education.gov.in/index.html')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/moe -1.jpg" alt="MoE">
-                    </div>
-                    <div class="back">
-                        <h3>PM E-VIDYA</h3>
-                        <p>Integrated Scheme for School Education by M/o Education</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://www.aicte-india.org/')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/moe -2.jpg" alt="MoE">
-                    </div>
-                    <div class="back">
-                        <h3>AICTE</h3>
-                        <p> All India Council for Technical Education</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://aishe.gov.in/#whats-new')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/moe -3.jpg" alt="MoE">
-                    </div>
-                    <div class="back">
-                        <h3>AI-SHE</h3>
-                        <p>Atal Innovation Mission</p>
-                    </div>
-                </div>
-            </div>
-
-           <div class="image-box" onclick="openSite('http://iksindia.org/index.php')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/moe -4.jpg" alt="MoE">
-                    </div>
-                    <div class="back">
-                        <h3>IKS</h3>
-                        <p>Integrated Knowledge System</p>
-                    </div>
-                </div>
-            </div>			
-        </div>
-    </div>
-
-
-
-
-    
-<!--- UGC Section --->
-
-<div class="group">
-    <div class="group-title">UGC</div>
-        <div class="container">
-
-
- <div class="image-box" onclick="openSite('https://ugcmoocs.inflibnet.ac.in/')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/ugc_mooc.png" alt="UGC - Mooc">
-                    </div>
-                    <div class="back">
-                        <h3>UGC Mooc</h3>
-                        <p>A Vertical of SWAYAM</p>
-                    </div>
-                </div>
-            </div>
-
-
-            
-            <div class="image-box" onclick="openSite('https://www.ugc.gov.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/UGC -1.png" alt="UGC -1">
-                    </div>
-                    <div class="back">
-                        <h3>UGC</h3>
-                        <p>University Grants Commission</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://ugcnet.nta.nic.in')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/UGC -2.jpg" alt="UGC -2">
-                    </div>
-                    <div class="back">
-                        <h3>NTA UGC NET</h3>
-                        <p>National Testing Agency & More</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="image-box" onclick="openSite('https://www.ugcnetonline.in/index.php')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/UGC -3.jpg" alt="UGC -3">
-                    </div>
-                    <div class="back">
-                        <h3>UGC NET</h3>
-                        <p>UGC NET Old PYQ Paper's</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://nta.ac.in/home')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/UGC -2.jpg" alt="UGC -2">
-                    </div>
-                    <div class="back">
-                        <h3>NTA Model Papers</h3>
-                        <p>Mock Test and Latest PYQ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-<!--- Video Sources Section --->
-
-    <div class="group" id="videos">
-        <div class="group-title">Video Sources</div>
-        <div class="container">
-
-            <div class="image-box" onclick="openSite('https://youtube.com/playlist?list=PLVOgwA_DiGzohWug0G1tM8aOhGzUSQKvH')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/v -1.jpg" alt="video sources 1">
-                    </div>
-                    <div class="back">
-                        <h3>AAJ Ka Itihas</h3>
-                        <p>Youtube Video Source by Sansad TV</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://youtube.com/playlist?list=PLqtVCj5iilH4w0Y8KBB4fqBu25T0sGhXG&si=m_K_shUu7NMSmezB')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/v -2.jpg" alt="video sources 2">
-                    </div>
-                    <div class="back">
-                        <h3>Bharat Ek Khoj</h3>
-                        <p>Youtube Video Source by Prasar Bharti Archives</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-box" onclick="openSite('https://youtube.com/playlist?list=PLqtVCj5iilH4UdtnLCYMrjI-zspVpJYQ_&si=9X_nVcT-UzNxh4cC')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/v -3.jpg" alt="video sources 3">
-                    </div>
-                    <div class="back">
-                        <h3>The Sculupture of India</h3>
-                        <p>Youtube Video Source by Prasar Bharti Archives</p>
-                    </div>
-                </div>
-            </div>
-
-          <div class="image-box" onclick="openSite('https://youtube.com/@bhardwajclassesraman?feature=share')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/bc.jpg" alt="video sources 3">
-                    </div>
-                    <div class="back">
-                        <h3>Bharadwaj Classes</h3>
-                        <p>Detailed Videos of History and others</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="image-box" onclick="openSite('https://www.youtube.com/@gandaberunda6267/playlists')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/gb.jpg" alt="video sources 3">
-                    </div>
-                    <div class="back">
-                        <h3>Genda Berunda</h3>
-                        <p>Detailed Videos of Historical videos in animation</p>
-                    </div>
-                </div>
-            </div>
-
-               <div class="image-box" onclick="openSite('https://www.youtube.com/playlist?list=PLotXwpsOfkPN2wvx9ZjPD_vx8HjbMA8xL')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/mb.jpg" alt="video sources 3">
-                    </div>
-                    <div class="back">
-                        <h3>EMBACEE-OL (Mukesh Baranwal)</h3>
-                        <p>Detailed Videos of History by Mukesh Baranwal</p>
-                    </div>
-                </div>
-            </div>
-
-<div class="image-box" onclick="openSite('https://youtube.com/playlist?list=PLYmb88iSWojnFateKodPc28JE4td-3EBk&si=F043hfdylnfG90G5')">
-                <div class="image-inner">
-                    <div class="front">
-                        <img src="assets/HS.jpg" alt="video sources 3">
-                    </div>
-                    <div class="back">
-                        <h3>History Scholar</h3>
-                        <p>Detailed Videos of History by Dr. Chandrakant (History Scholar)</p>
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
-    </div>
-
-<!-- About Section -->
-
-    <div class="group" id="about">
-        <div class="group-title">About HistoryNama</div>
+    <section class="hero-copy" aria-labelledby="hero-heading">
+        <h2 id="hero-heading" class="page-title">A polished learning hub built for modern research</h2>
+        <p class="intro-text">Discover trusted portals, academic repositories, and documentary playlists in one elegant interface.</p>
+    </section>
+    <section class="group" id="materials" aria-labelledby="materials-heading">
+        <header class="group-head">
+            <h2 id="materials-heading" class="group-title">Study Materials</h2>
+            <p class="group-description">Top curated study resources for history and research preparation.</p>
+        </header>
+        <div class="resource-grid" data-category="Study Materials"></div>
+    </section>
+    <section class="group" id="swayam" aria-labelledby="swayam-heading">
+        <header class="group-head">
+            <h2 id="swayam-heading" class="group-title">SWAYAM Portals</h2>
+            <p class="group-description">Official SWAYAM portals for online courses, DTH learning, and certification.</p>
+        </header>
+        <div class="resource-grid" data-category="SWAYAM"></div>
+    </section>
+    <section class="group" id="epg" aria-labelledby="epg-heading">
+        <header class="group-head">
+            <h2 id="epg-heading" class="group-title">ePG Pathshala</h2>
+            <p class="group-description">Digital academic materials and research collections from INFLIBNET.</p>
+        </header>
+        <div class="resource-grid" data-category="ePG Pathshala"></div>
+    </section>
+    <section class="group" id="research" aria-labelledby="research-heading">
+        <header class="group-head">
+            <h2 id="research-heading" class="group-title">Research & Journals</h2>
+            <p class="group-description">Archives, journals, repositories, and academic portals for deep historical research.</p>
+        </header>
+        <div class="resource-grid" data-category="Research & Journals"></div>
+    </section>
+    <section class="group" id="ugc" aria-labelledby="ugc-heading">
+        <header class="group-head">
+            <h2 id="ugc-heading" class="group-title">UGC & Higher Education</h2>
+            <p class="group-description">Central education resources, testing agencies, and academic services.</p>
+        </header>
+        <div class="resource-grid" data-category="UGC"></div>
+    </section>
+    <section class="group" id="moe" aria-labelledby="moe-heading">
+        <header class="group-head">
+            <h2 id="moe-heading" class="group-title">Ministry of Education</h2>
+            <p class="group-description">Government education schemes, policy portals, and official resources.</p>
+        </header>
+        <div class="resource-grid" data-category="Ministry of Education"></div>
+    </section>
+    <section class="group" id="videos" aria-labelledby="videos-heading">
+        <header class="group-head">
+            <h2 id="videos-heading" class="group-title">Video Sources</h2>
+            <p class="group-description">Curated playlists, documentaries, and lecture channels for history learners.</p>
+        </header>
+        <div class="resource-grid" data-category="Video Sources"></div>
+    </section>
+    <section class="group" id="about" aria-labelledby="about-heading">
+        <header class="group-head">
+            <h2 id="about-heading" class="group-title">About HistoryNama</h2>
+            <p class="group-description">A lightweight, searchable hub for learners who want reliable educational links without clutter.</p>
+        </header>
         <div class="about-grid">
-            <div class="about-card">
-                <h3>Mission</h3>
-                <p>To connect students and researchers with reliable history resources through a calm, modern interface.</p>
-            </div>
-            <div class="about-card">
-                <h3>Values</h3>
-                <p>Clarity, accessibility, and simplicity — while keeping advanced academic portals just a click away.</p>
-            </div>
+            <article class="about-card">
+                <h3>Curated for learners</h3>
+                <p>Resources chosen to support study, research, and teaching in history and social sciences.</p>
+            </article>
+            <article class="about-card">
+                <h3>Accessible design</h3>
+                <p>Responsive layout, keyboard-friendly controls, and dark mode help you focus across devices.</p>
+            </article>
         </div>
-    </div>
-
-    <div class="group" id="contact">
-        <div class="group-title">Get in Touch</div>
+    </section>
+    <section class="group" id="contact" aria-labelledby="contact-heading">
+        <header class="group-head">
+            <h2 id="contact-heading" class="group-title">Contact & Feedback</h2>
+            <p class="group-description">Share suggestions, report broken links, or request new resources.</p>
+        </header>
         <div class="contact-grid">
             <div class="contact-card">
-                <h3>Email</h3>
-                <p><a href="mailto:info.scholars7@gmail.com">info.scholars7@gmail.com</a></p>
+                <h3>Get in touch</h3>
+                <p>Email us at <a href="mailto:info.scholar7@gmail.com">info.scholar7@gmail.com</a> for updates and suggestions.</p>
             </div>
             <div class="contact-card">
-                <h3>Location</h3>
-                <p>Online Learning Hub · India</p>
+                <h3>Stay connected</h3>
+                <p>Bookmark the hub, use the search box, and return anytime for the latest academic portal links.</p>
             </div>
         </div>
-    </div>
-
+    </section>
 </main>
-
 <footer class="page-footer">
     <div class="footer-inner">
         <div>
             <p class="footer-title">HistoryNama</p>
-            <p>info.scholars7@gmail.com | Online Learning Hub</p>
+            <p class="footer-copy">A modern, resource-first interface for history students and educators.</p>
         </div>
         <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#materials">Study Materials</a>
-            <a href="#contact">Contact</a>
+            <a href="#home">Top</a>
+            <a href="#materials">Materials</a>
+            <a href="#videos">Videos</a>
+        </div>
+        <div class="footer-social-group">
+            <p class="footer-social-title">Follow us</p>
+            <div class="social-media">
+                <a href="https://x.com/ashutoshtir7" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="twitter" aria-label="Follow on Twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.45 9 0 11-4s1-6.5 1-6.5z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/iamashutoshtiwari7" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="linkedin" aria-label="Connect on LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="facebook" aria-label="Like on Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a6 6 0 00-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://t.me/shodhpath" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="telegram" aria-label="Follow on Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12S18.627 0 12 0zm5.867 7.732l-1.987 9.763c-.111.54-.464.674-.94.432l-2.873-2.12-1.388 1.328c-.153.153-.282.282-.574.282l.206-2.94 5.343-4.824c.233-.206-.05-.32-.363-.114l-6.61 4.158-2.85-.889c-.62-.193-.632-.62.132-.916l11.14-4.29c.517-.2.966.124.8.914z"/></svg>
+            </a>
+            <a href="https://instagram.com/shodhpath_official" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="instagram" aria-label="Follow on Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@shodhpath" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="youtube" aria-label="Subscribe on YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 7.186c-.262-1.005-1.04-1.793-2.092-2.02C19.065 4.8 12 4.8 12 4.8s-7.065 0-9.406.366C1.542 5.773.764 6.561.502 7.566.001 9.59 0 12 0 12s0 2.41.502 4.434c.262 1.005 1.04 1.793 2.092 2.02C4.935 19.2 12 19.2 12 19.2s7.065 0 9.406-.366c1.052-.227 1.83-1.015 2.092-2.02.502-2.024.502-4.434.502-4.434s0-2.41-.502-4.434zM9.6 15.6V8.4l5.9 3.6-5.9 3.6z"/></svg>
+            </a>
+            <a href="https://github.com/shashwatam-dev" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="github" aria-label="Star on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://pinterest.com/shashwatam_dev" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="pinterest" aria-label="Follow on Pinterest">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.371 0 0 5.371 0 12c0 5.105 3.146 9.43 7.513 11.206-.104-.933-.198-2.36.041-3.389.223-.947 1.438-5.769 1.438-5.769s-.36-.737-.36-1.826c0-1.709.99-2.987 2.225-2.987 1.05 0 1.55.788 1.55 1.733 0 1.056-.67 2.625-1.01 4.085-.29 1.222.62 2.214 1.84 2.214 2.213 0 3.65-2.323 3.65-5.687 0-2.949-2.002-5.021-5.22-5.021-3.568 0-5.796 2.668-5.796 5.42 0 1.07.41 2.226.924 2.853.103.126.118.217.09.336-.096.372-.315 1.212-.346 1.384-.054.286-.18.363-.414.213-1.552-.743-2.513-2.777-2.513-4.466 0-3.627 2.809-6.955 8.104-6.955 4.282 0 7.622 3.054 7.622 7.127 0 4.27-2.668 7.703-6.295 7.703-1.226 0-2.378-.637-2.772-1.389 0 0-.654 2.502-.81 3.04-.286 1.046-1.053 2.484-1.565 3.31 1.148.354 2.363.544 3.625.544 6.628 0 12-5.372 12-12S18.629 0 12 0z"/></svg>
+            </a>
+            </div>
         </div>
     </div>
-    <p class="footer-copy">© 2026 HistoryNama. All rights reserved.</p>
+    <div class="footer-bottom">
+        <p class="footer-note">© 2026 HistoryNama. Designed for learners, researchers, and educators.</p>
+    </div>
 </footer>
-
+<button id="topButton" class="top-button" type="button" aria-label="Scroll to top">↑</button>
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
