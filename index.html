@@ -14,23 +14,30 @@
 <body>
 <header class="page-header">
     <div class="header-bar">
-        <a class="brand" href="#home"><span class="brand-gradient">ShodhPath</span><span class="brand-fallback">ShodhPath</span></a>
-        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
-            <span class="hamburger"></span>
-        </button>
+        <div class="brand-group">
+            <a class="brand" href="./" aria-label="ShodhPath home">
+                <img src="assets/logo.jpg" alt="ShodhPath logo" class="brand-logo">
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
         <nav id="main-nav" class="top-nav" aria-label="Primary navigation">
-            <a href="#home">Home</a>
-            <a href="#materials">Materials</a>
-            <a href="#swayam">SWAYAM</a>
-            <a href="#research">Research</a>
-            <a href="#ugc">UGC</a>
-            <a href="#videos">Videos</a>
-            <a href="#contact">Contact</a>
+            <a href="./"><span class="nav-icon">🏠</span> Home</a>
+            <a href="#materials"><span class="nav-icon">📚</span> Materials</a>
+            <a href="#swayam"><span class="nav-icon">🎓</span> SWAYAM</a>
+            <a href="#research"><span class="nav-icon">🔎</span> Research</a>
+            <a href="#ugc"><span class="nav-icon">🏛️</span> UGC</a>
+            <a href="#videos"><span class="nav-icon">🎥</span> Videos</a>
+            <a href="#contact"><span class="nav-icon">✉️</span> Contact</a>
         </nav>
-        <div class="header-search">
+        
+      <!---  <div class="header-search">
             <label for="searchInput" class="sr-only">Search resources</label>
             <input id="searchInput" class="search-input" type="search" placeholder="Search..." aria-label="Filter resources">
         </div>
+    --->
+
         <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Switch theme">
             <span class="icon-sun">☀︎</span>
             <span class="icon-moon">🌙</span>
@@ -146,7 +153,7 @@
             <a href="#materials">Materials</a>
             <a href="#videos">Videos</a>
         </div>
-        <div class="footer-social-group">
+        <div class="footer-social-group" align="center">
             <p class="footer-social-title">Follow us</p>
             <div class="social-media">
                 <a href="https://x.com/ashutoshtir7" target="_blank" rel="noopener noreferrer" class="social-link" data-platform="twitter" aria-label="Follow on Twitter">
