@@ -247,6 +247,32 @@ const categories = [
             }
         ]
     },
+
+
+ {
+        title: 'Education and Psychology',
+        resources: [
+            {
+                title: 'Helpful Professor',
+                description: 'Helpful Professor for Teaching and Education.',
+                url: 'https://helpfulprofessor.com/',
+                image: 'assets/hp.png',
+                alt: 'helpful Professor'
+            },
+            {
+                title: 'Simply Psychology',
+                description: 'Simply Psychology for Psychological Education.',
+                url: 'https://www.simplypsychology.org/',
+                image: 'assets/sp.png',
+                alt: 'Simply Psychology'
+            },
+        ]
+    },
+
+
+
+
+    
     {
         title: 'Video Sources',
         resources: [
